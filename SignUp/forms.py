@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+from django import forms
+
+class ConteactForm(forms.Form):
+    MAJOR_CHOICE = [
+        [u'网络工程', u'网络工程'],
+        [u'信息安全', u'信息安全'],
+        [u'计算科学与技术', u'计算机科学与技术'],
+        [u'物联网工程', u'物联网工程'],
+        [u'软件工程', u'软件工程']
+    ]
+    WISH_CHOICE = [
+        [u'网络部', u'网络部'],
+        [u'创业部', u'创业部'],
+        [u'竞赛部', u'竞赛部'],
+        [u'社团部', u'社团部']
+    ]
+
+    name = forms.CharField(max_length=200, label=u'姓名')
+    major = forms.CharField(max_length=200, choices=MAJOR_CHOICE, label=u'专业')
+    phone_num = forms.CharField(max_length=200, laber=u'电话')
+    email = forms.EmailField(label=u'邮箱')
+    qq = forms.CharField(max_length=200, label=u'QQ')
+    first_choice = forms.CharField(max_length=200, choices=WISH_CHOICE, label=u'第一志愿')
+    second_choice = forms.CharField(max_length=200, choices=WISH_CHOICE, label=u'第二志愿')
+    recognize = forms.CharField(label=u'对科协的认识', widget=forms.Textarea)
+    introduction = forms.CharField(label=u'自我介绍', widget=forms.Textarea)
