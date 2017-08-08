@@ -96,9 +96,12 @@
 	</style>
 </head>
 <body>
+{% if message %}
+    <div class="success-msg">{{message}}</div>
+{% endif %}
 <form action="index.html" method="post" class="smart-green">
     {% csrf_token %}     <!-安全性->
-	<h1>报名信息填写
+	<h1>15届科协网上报名
 		<span>请认真填写好每一项信息，且本网站不会泄露任何信息</span>
 	</h1>
     {{ form.as_p }}

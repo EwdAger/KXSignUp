@@ -19,6 +19,5 @@ from SignUp.views import index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/$', index),
-    #url(r'^index/action$', Post, name='Post'),
+    url(r'^$', index),
 ]

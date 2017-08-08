@@ -22,7 +22,7 @@ class SignMessage(models.Model):
 
     name = models.CharField(max_length=200, verbose_name='姓名')
     major = models.CharField(max_length=200, choices=MAJOR_CHOICE, verbose_name='专业')
-    phone_num = models.CharField(max_length=200, verbose_name='电话', null=True)
+    phone_num = models.CharField(max_length=200, verbose_name='电话')
     email = models.EmailField(verbose_name='邮箱')
     qq = models.CharField(max_length=200, verbose_name='QQ')
     first_choice = models.CharField(max_length=200, choices=WISH_CHOICE, verbose_name='第一志愿')
