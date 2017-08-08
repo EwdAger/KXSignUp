@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.template.loader import get_template
-from django.shortcuts import render
 from SignUp import forms, models
-from django.http import HttpResponse
+from django.shortcuts import render
 # Create your views here.
 
 def index(request):
@@ -28,6 +26,4 @@ def index(request):
                                               recognize=recognize
                                               )
     form = forms.ContactForm()
-    template = get_template("index.html")
-    html = template.render(locals())
-    return HttpResponse(html)
+    return render(request, 'index.html', locals())
