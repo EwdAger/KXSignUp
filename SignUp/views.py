@@ -8,7 +8,7 @@ def index(request):
     if request.method == 'POST':
         form = forms.ContactForm(request.POST)
         if form.is_valid():
-            message = "您的信息已经成功录入，请勿重复提交信息"
+            message = True
 
             name = request.POST.get('name')
             major = request.POST.get('major')

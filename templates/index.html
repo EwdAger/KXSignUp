@@ -1,113 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>15届科协网上报名</title>
-	<style>
-		.smart-green {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 500px;
-			background: #F8F8F8;
-			padding: 30px 30px 20px 30px;
-			font: 12px Arial, Helvetica, sans-serif;
-			color: #666;
-			border-radius: 5px;
-			-webkit-border-radius: 5px;
-			-moz-border-radius: 5px;
-		}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="/static/s-forms.css">
+		<title>15届科协网上报名</title>
+		{% if message %}
+		<script type="text/javascript">
+  			alert("您的信息已经成功录入，请勿重复提交信息")
+		</script>
+		{% endif %}
+	</head>
+	<body>
+		<div class="container">
+	    <form action="" method="POST" id="s-form" class="s-form">
+   				{% csrf_token %}     <!-- 安全性 -->
+				<header>
+					<p class="topic">15届科协网上报名</p>
+                    <p class="descri">请认真填写好每一项，本网站不会透露任何信息</p>
+				</header>
+				
+				<fieldset>
+					<section>
+						<label class="input">
+							<i class="icon-append "></i>
+							{{form.name}}
+							<b class="tooltip tooltip-bottom-right">请输入您的姓名</b>
+						</label>
+					</section>
 
-		.smart-green h1 {
-			font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
-			padding: 20px 0px 20px 40px;
-			display: block;
-			margin: -30px -30px 10px -30px;
-			color: #FFF;
-			background: #9DC45F;
-			text-shadow: 1px 1px 1px #949494;
-			border-radius: 5px 5px 0px 0px;
-			-webkit-border-radius: 5px 5px 0px 0px;
-			-moz-border-radius: 5px 5px 0px 0px;
-			border-bottom: 1px solid #89AF4C;
-		}
+					<section>
+						<label class="select">
+							{{form.major}}
+							<i></i>
+						</label>
+					</section>
 
-		.smart-green h1 > span {
-			display: block;
-			font-size: 11px;
-			color: #FFF;
-		}
+					<section>
+						<label class="input">
+							<i class="icon-append "></i>
+							{{form.phone_num}}
+							<b class="tooltip tooltip-bottom-right">请输入您的电话</b>
+						</label>
+					</section>
 
-		.smart-green label {
-			display: block;
-			margin: 0px 0px 5px;
-		}
+					<section>
+						<label class="input">
+							<i class="icon-append "></i>
+							{{form.email}}
+							<b class="tooltip tooltip-bottom-right">请输入邮箱地址</b>
+						</label>
+					</section>
 
-		.smart-green label > span {
-			float: left;
-			margin-top: 10px;
-			color: #5E5E5E;
-		}
+					<section>
+						<label class="input">
+							<i class="icon-append "></i>
+							{{form.qq}}
+							<b class="tooltip tooltip-bottom-right">请输入您的QQ号</b>
+						</label>
+					</section>
 
-		.smart-green input[type="text"], .smart-green input[type="email"], .smart-green textarea, .smart-green select {
-			color: #555;
-			height: 30px;
-			line-height: 15px;
-			width: 100%;
-			padding: 0px 0px 0px 10px;
-			margin-top: 2px;
-			border: 1px solid #E5E5E5;
-			background: #FBFBFB;
-			outline: 0;
-			-webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
-			box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
-			font: normal 14px/14px Arial, Helvetica, sans-serif;
-		}
+				</fieldset>
 
-		.smart-green textarea {
-			height: 100px;
-			padding-top: 10px;
-		}
+				<fieldset>
 
+					<section>
+						<label class="select">
+							{{form.first_choice}}
+							<i></i>
+						</label>
+					</section>
 
-		.smart-green .button {
-			background-color: #9DC45F;
-			border-radius: 5px;
-			-webkit-border-radius: 5px;
-			-moz-border-border-radius: 5px;
-			border: none;
-			padding: 10px 25px 10px 25px;
-			color: #FFF;
-			text-shadow: 1px 1px 1px #949494;
-		}
+					<section>
+						<label class="select">
+							{{form.second_choice}}
+							<i></i>
+						</label>
+					</section>
 
-		.smart-green .button:hover {
-			background-color: #80A24A;
-		}
-
-		.error-msg{
-			color: red;
-			margin-top: 10px;
-		}
-		.success-msg{
-			color: #80A24A;
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	</style>
-</head>
-<body>
-{% if message %}
-    <div class="success-msg">{{message}}</div>
-{% endif %}
-<form action="index.html" method="post" class="smart-green">
-    {% csrf_token %}     <!-- 安全性 -->
-	<h1>15届科协网上报名
-		<span>请认真填写好每一项信息，且本网站不会泄露任何信息</span>
-	</h1>
-    {{ form.as_p }}
-    <br/>
-    <input type="submit" value="提交">
-    <input type="reset" value="重置">
-</form>
-</body>
+				</fieldset>
+				<fieldset>
+					{{form.recognize}}
+				</fieldset>
+				<fieldset>
+					{{form.introduction}}
+				</fieldset>
+				<footer>
+					<button type="reset" class="button">重置</button>
+					<button type="submit" class="button">提交</button>
+				</footer>
+			</form>			
+		</div>
+		
+	</body>
 </html>
