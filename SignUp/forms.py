@@ -10,12 +10,11 @@ class ContactForm(forms.Form):
         [u'软件工程', u'软件工程']
     ]
     WISH_CHOICE = [
-        [u'网络部', u'网络部'],
-        [u'创业部', u'创业部'],
-        [u'竞赛部', u'竞赛部'],
-        [u'社团部', u'社团部']
+        [u'网络部', u'科协网络部'],
+        [u'创业部', u'科协创业部'],
+        [u'竞赛部', u'科协竞赛部'],
+        [u'社团部', u'科协社团部']
     ]
-
     name = forms.CharField(max_length=200, label=u'姓名', widget=forms.TextInput(attrs={'placeholder': u'姓名'}))
     major = forms.ChoiceField(choices=MAJOR_CHOICE, label=u'专业')
     phone_num = forms.CharField(max_length=200, label=u'电话', widget=forms.TextInput(attrs={'placeholder': u'电话号码'}))
