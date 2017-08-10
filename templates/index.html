@@ -7,7 +7,10 @@
 		<title>15届科协网上报名</title>
 		{% if message %}
 		<script type="text/javascript">
-  			alert("您的信息已经成功录入，请勿重复提交信息")
+  			alert("您的信息已经成功录入，请勿重复提交信息。");
+			if (confirm("是否加入15届科协迎新群？")) {
+				window.location.href="https://jq.qq.com/?_wv=1027&k=4Epgp6B";
+    }
 		</script>
 		{% endif %}
 	</head>
