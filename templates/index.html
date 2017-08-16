@@ -2,27 +2,178 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="stylesheet" href="/static/s-forms.css">
-		<title>15届科协网上报名</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>15届计算机学院科协网上报名</title>
+		
+	<!-- Bootstrap -->
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Swiper 手机浏览器自适应-->
+    <link href="/static/css/swiper.min.css" rel="stylesheet">
+	<!-- Animate -->
+	<link href="/static/css/animate.css" rel="stylesheet">
+	<!-- Responsive -->
+	<link href="/static/css/responsive.css " rel="stylesheet">
+	
+	<link href="/static/css/s-style.css" rel="stylesheet">
+	
+<!-- jQuery -->
+<script src="/static/js/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/static/js/bootstrap.min.js"></script>
+
+<!-- Easing -->
+<script src="/static/js/jquery.easing.min.js"></script>
+
+<!-- 焦点图变化 -->
+<script src="/static/js/isotope.pkgd.min.js"></script>
+<script src="/static/js/lightcase.js"></script>
+
+<!-- Swiper -->
+<script src="/static/js/swiper.jquery.min.js"></script>
+<!--3d旋转-->
+<script src="/static/js/rotate3di.js" ></script>
+<!---->
+<script src="/static/js/wow.min.js"></script>
+<script src="/static/js/custom.js"></script>
 		{% if message %}
 		<script type="text/javascript">
   			alert("您的信息已经成功录入，请勿重复提交信息。");
 			if (confirm("是否加入15届科协迎新群？")) {
 				window.location.href="https://jq.qq.com/?_wv=1027&k=4Epgp6B";
-    }
-		</script>
+			}
+    		</script>
 		{% endif %}
-	</head>
-	<body>
-		<div class="container">
-	    <form action="" method="POST" id="s-form" class="s-form">
+	</head> 
+	
+	<body data-spy="scroll">
+		<div class="preloader">
+          <div class="loader">
+	      <div class="ld-child"></div>
+	      <div class="ld-child ld-child2"></div>
+    </div>
+</div>
+	<header>
+  		<nav class="main-menu menu-fixed">
+	<div class="container">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/index"><img src="/static/img/logo.png" alt="logo" class="img-responsive"></a>
+	  </div>
+
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+		
+				<ul class="nav navbar-nav navbar-right">
+		 			<li><a class="page-scroll" href="#banner">主页</a></li>
+		 			<li><a class="page-scroll" href="#about">关于我们</a></li>
+		 			<li><a class="page-scroll" href="#join">加入我们</a></li>
+		 		 	<li><a class="page-scroll" href="#contact">联系我们</a></li>
+		 		 	<li><a class="page-scroll" href="/admin">管理员登录</a></li>
+
+				</ul>
+
+	  		</div><!-- /.navbar-collapse -->
+		</div><!-- /.container -->
+  		</nav>
+	</header>
+	<!--主页-->
+	<section id="banner" class="banner">
+  		<div class="overlay">
+			<div class="banner-content">
+	 			 <h3>Welcome</h3>
+	  			 <p>湖南科技大学计算机科学与工程学院<br>科学技术协会</p>
+	 			 <a href="#join" class="default-button page-scroll">Get Started</a>
+			</div><!-- banner content -->
+ 		</div><!-- overlay -->
+	</section>
+	
+	
+<!-- about section start -->
+<section id="about" class="about">
+  <div class="overlay padding-120">
+	<div class="container">
+	  <div class="section-header text-center">
+		<h2>About Us</h2>
+	  </div><!-- section header -->
+
+	  <div class="about-slider swiper-container">
+		<div class="swiper-wrapper">
+		  <div class="swiper-slide">
+			<div class="about-item">
+			  <div class="image">
+				<img src="/static/img/qqlogo.png" alt="client image" class="img-responsive">
+			  </div>
+			  <div class="content">
+				<span>网络部</span>
+				<p><em>网络部负责掌管学院网站，解决学院官网的技术问题。同时负责计算机学院科协官方QQ小科。主要负责协助学院领导完善学院网站以及重建学院网站。在这里可以学习到课堂上学习不到的黑科技，如网站搭建，聊天机器人制作，PS，视频制作等。
+</em></p>
+			  </div>
+			</div><!-- about item -->
+		  </div><!-- swiper-slide -->
+		  <div class="swiper-slide">
+			<div class="about-item">
+			  <div class="image">
+				<img src="/static/img/qqlogo.png" alt="client image" class="img-responsive">
+			  </div>
+			  <div class="content">
+				<span>竞赛部</span>
+				<p><em>负责学院以及学校的竞赛类活动，包括科普知识竞赛，创青春，挑战杯，Srip项目，互联网+等各类科技赛事的策划，筹备与组织实施，持续关注各项赛事，专注于为同学们提供更及时的比赛信息，让同学们在实践中增强自己的能力。实现专业和理论相结合，在比赛中展现自我。</em></p>
+			  </div>
+			</div><!-- about item -->
+		  </div><!-- swiper-slide -->
+		  <div class="swiper-slide">
+			<div class="about-item">
+			  <div class="image">
+				<img src="/static/img/qqlogo.png" alt="client image" class="img-responsive">
+			  </div>
+			  <div class="content">
+				<span>创业部</span>
+				<p><em>以“创新引领创业”为根基，坚持以新型思维，新式理念，新颖想法成长发展。管理服务的微科创新创业基地专门为创新创业型人才提供优良发展环境，培养出一大批优秀人才，受到国家教育部重视。创业部们组织各种创新创业比赛，为广大创新型学生提供发展平台。创新是我们的理念，我们一直坚持创新，永不止步。</em></p>
+			  </div>
+			</div><!-- about item -->
+		  </div><!-- swiper-slide -->
+		   <div class="swiper-slide">
+			<div class="about-item">
+			  <div class="image">
+				<img src="/static/img/jxlogo.jpg" alt="client image" class="img-responsive">
+			  </div>
+			  <div class="content">
+				<span>社团部</span>
+				<p><em>负责管理学院下唯一社团计算机协会。工作内容较广，涵盖了组织、宣传、技术、策划等方面工作。具体工作包括组织策划社团活动，宣传社团活动，技术协助社团，监督社团工作等。</em></p>
+			  </div>
+			</div><!-- about item -->
+		  </div><!-- swiper-slide -->
+		   
+		</div><!-- swiper wrapper -->
+		<div class="about-pagination"></div>
+	  </div><!-- about slider -->
+	</div><!-- container -->
+  </div><!-- overlay -->
+</section><!-- about -->
+<!-- about section end -->
+
+
+	<!--加入我们-->
+<section id="join" class="join">
+  <div class="overlay padding-20">
+	<div class="container">
+		<div class="col-xs-12 col-sm-6 col-md-8">
+	      <form action="http://localhost:8000/index/" method="POST" id="s-form" class="s-form">
    				{% csrf_token %}     <!-- 安全性 -->
-				<header>
+				<div class="header-j">
 					<p class="topic">15届科协网上报名</p>
-                    <p class="descri">请认真填写好每一项，本网站不会透露任何信息</p>
-				</header>
+                    <p class="descri">为防止现场面试出现失误，请认真填写好每一项，我们将认真审阅您的报名信息。</p>
+				</div>
 				
 				<fieldset>
 					<section>
@@ -36,7 +187,7 @@
 					<section>
 						<label class="select">
 							{{form.major}}
-							<i></i>
+							<!--<i></i>-->
 						</label>
 					</section>
 
@@ -71,14 +222,14 @@
 					<section>
 						<label class="select">
 							{{form.first_choice}}
-							<i></i>
+							<!--<i></i>-->
 						</label>
 					</section>
 
 					<section>
 						<label class="select">
 							{{form.second_choice}}
-							<i></i>
+							<!--<i></i>-->
 						</label>
 					</section>
 
@@ -89,12 +240,81 @@
 				<fieldset>
 					{{form.introduction}}
 				</fieldset>
-				<footer>
+				<div class="footer-j">
 					<button type="reset" class="button">重置</button>
 					<button type="submit" class="button">提交</button>
-				</footer>
-			</form>			
+				</div>
+			</form>		
+			</div>
+	</div><!-- container -->
+  </div><!-- overlay -->
+</section><!-- 加入我们 -->
+<!--  end -->
+
+   <!-- 联系我们 -->
+	<section id="contact" class="contact-us padding-120">
+  <div class="container">
+	<div class="section-header text-center">
+	  <h3>Contact Us</h3>
+	  <p style="text-align: center; padding: 3px;">Click Icon</p>
+	</div><!-- section header -->
+   
+   
+    
+	<div class="row">
+	   <div class="col-md-4 col-sm-6 col-xs-12" >
+		  	<div class="iconshow" id="change3D1">
+		  		<div class="front"><img src="/static/img/qq.png" /></div>
+		  		<div class="back"><img src="/static/img/qq_ewm.png" /></div>
+		  	</div>
+		  	
+		</div>	
+		<div class="col-md-4 col-sm-6 col-xs-12" >
+		  	<div class="iconshow" id="change3D2">
+		  		<div class="front"><img src="/static/img/kx_logo.png" /></div>
+		  		<div class="back"><img src="/static/img/14.png" /></div>
+		 	</div>
+	  	</div>
+	  <div class="col-md-4 col-sm-6 col-xs-12">
+		<div class="contact-info">
+		<div class="info-item">
+		  <div class="icon">
+			<span><i aria-hidden="true"><img src="/static/img/address.png"></i></span>
+		  </div>
+		  <div class="content">
+			<p style="line-height: 60px;">湖南科技大学逸夫楼111号办公室</p>
+		  </div>
 		</div>
-		
+		<div class="info-item">
+		  <div class="icon">
+			<span><i aria-hidden="true"><img src="/static/img/email.png"></i></span>
+		  </div>
+		  <div class="content">
+			<p style="line-height: 60px;">1094736932@qq.com</p>
+		  </div>
+		</div>
+		</div><!-- contact-info-->
+	  </div>
+	</div><!-- row -->
+    
+	
+  </div><!-- container -->
+</section><!-- client -->
+
+<footer>
+  <div class="container">
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<p> coding by EwdAger & 小考拉</p>
+		</div>
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<span class="foot-r">Powered by 院科协网络部</span>
+		</div>
+		<a class="page-scroll scroll-top " href="#banner">
+			<i><span>up</span></i></a>
+	</div><!-- row -->
+  </div><!-- container -->
+</footer>
+
 	</body>
 </html>
