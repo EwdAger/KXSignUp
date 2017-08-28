@@ -1,5 +1,5 @@
 ## 15届科协招新网站
-[站点](http://www.gvoidy.com)
+[站点](http://www.gvoidy.cn)
 
 ### 基础功能
 ***
