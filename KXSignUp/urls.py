@@ -20,8 +20,8 @@ from werobot.contrib.django import make_view
 from robot import robot
 
 urlpatterns = [
+    url(r'^$', index),
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', index),
     url(r'^captcha/', include('captcha.urls')),
     url(r'^robot/', make_view(robot)),
 ]
