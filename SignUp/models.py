@@ -29,7 +29,7 @@ class SignMessage(models.Model):
     second_choice = models.CharField(max_length=200, choices=WISH_CHOICE, verbose_name='第二志愿')
     recognize = models.TextField(verbose_name='对科协的认识')
     introduction = models.TextField(verbose_name='自我介绍')
-    pub_date = models.DateTimeField(default=timezone.now)
+    pub_date = models.DateTimeField(default=timezone.now, verbose_name='录入时间')
 
     class Meta:
         ordering = ('-pub_date', )

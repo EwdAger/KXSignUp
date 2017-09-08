@@ -7,7 +7,7 @@ from .models import SignMessage
 
 class SignAdmin(admin.ModelAdmin):
     list_display = ('name', 'major', 'phone_num', 'email', 'qq', 'first_choice',
-                    'second_choice', 'recognize', 'introduction')
+                    'second_choice', 'pub_date')
     search_fields = ('name', )
     list_filter = ('major', 'first_choice')
 admin.site.register(SignMessage, SignAdmin)
