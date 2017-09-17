@@ -28,3 +28,6 @@ def index(request):
                                               )
     form = forms.ContactForm()
     return render(request, 'index.html', locals())
+
+def not_found(request):
+    return render(request, '404.html')

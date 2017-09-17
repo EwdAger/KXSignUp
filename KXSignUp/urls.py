@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from SignUp.views import index
+from SignUp.views import not_found
 from werobot.contrib.django import make_view
 from robot import robot
 
 urlpatterns = [
-    url(r'^$', index),
+    url(r'^$', not_found),
     url(r'^admin/', admin.site.urls),
     url(r'^captcha/', include('captcha.urls')),
     url(r'^robot/', make_view(robot)),
