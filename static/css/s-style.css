@@ -298,7 +298,7 @@ input[type="submit"][disabled]:focus {
 /*	02	- Header
 ----------------------------------------------*/
 header .main-menu{
-	  min-height: 90px;
+	min-height: 70px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     z-index: 999;
@@ -334,7 +334,7 @@ header .main-menu ul li a:hover, header .main-menu ul li a:focus{
 }
 header .main-menu ul li.active a{
     background-color: transparent;
-    color: #ff0000;
+    color: #cacaca;
 }
 header .main-menu ul li ul li a{
 	padding: 15px;
@@ -456,7 +456,7 @@ header .main-menu ul li ul li a{
 
 .s-form * {
 	margin: 0;
-	padding: 0;
+    padding-top: 5px;
 }
 
 .s-form .header-j {
@@ -534,7 +534,7 @@ header .main-menu ul li ul li a{
 	display: block;
 	width: 90%;
 	margin: 5px 20px;
-	height: 50px;
+	height: 100px;
   	padding: 8px 8px;
   	border-width: 2px;
   	font-size: 16px;
@@ -672,9 +672,7 @@ input:required
 	  height: 150px;
     background: #fff;
 }
-.contact-us .row .iconshow img{
-	padding: 25px;
-}
+
 
 .info-item{
     margin-bottom: 30px;
@@ -691,7 +689,6 @@ input:required
     display: block;
     height: 60px;
     width: 60px;
-    background-color: #f6f6f6;
     color: #55575d;
     font-size: 36px;
     text-align: center;
